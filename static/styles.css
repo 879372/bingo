@@ -10,3 +10,28 @@ th, td {
 #countdown {
     font-size: 20px;
 }
+
+.cartela h2 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cartela table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cartela td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+.cartela td:hover {
+    background-color: #f2f2f2;
+}
+
+#countdown {
+    font-size: 20px;
+}
