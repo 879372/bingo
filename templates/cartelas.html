@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelas Geradas</title>
+</head>
+<body>
+    <h1>Cartelas Geradas</h1>
+
+    {% for cartela in cartelas %}
+        <h2>Cartela {{ loop.index }}</h2>
+        <table border="1">
+            <tr>
+                <th>B</th><th>I</th><th>N</th><th>G</th><th>O</th>
+            </tr>
+            {% for linha in cartela %}
+                <tr>
+                    {% for numero in linha %}
+                        <td>{{ numero }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+    
+    {% if numero_sorteado %}
+        <h2 id="numero-sorteado">Número Sorteado: {{ numero_sorteado }}</h2>
+    {% endif %}
+
+    <form id="sortear-form" action="/sortear_numero" method="get">
+        <button id="sortear-btn" type="button" onclick="sortearAutomatico()">Iniciar BINGO</button>
+    </form>
+</body>
+</html>

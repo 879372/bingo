@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+</head>
+<body>
+    <h1>Página Principal</h1>
+    <div id="countdown"></div>
+
+    <form id="gerar-cartelas-form" onsubmit="event.preventDefault(); gerarCartelas()">
+        <label for="quantidade_cartelas">Quantidade de Cartelas:</label>
+        <input type="number" id="quantidade_cartelas" name="quantidade_cartelas" min="1" required><br><br>
+        <input type="submit" value="Gerar Cartelas">
+    </form>
+    <div id="cartelas-geradas">
+        <!-- Aqui serão renderizadas as cartelas -->
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
